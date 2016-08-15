@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<style type="text/css">
+
+	.container
+	{
+		background-color: gray;
+		min-width: 100%;
+		min-height: 100%;
+		background-color: #fff;
+	    position: relative;
+	    top: 0;
+	    bottom: 100%;
+	    left: 0px;
+	    z-index: 1;
+
+	    /*padding: 4em;*/
+    	background-image: linear-gradient(135deg,rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);
+    	background-size: 200%;
+	}
+
+	.sliding-menu
+	{
+		display: flex;
+		flex-direction:column;
+
+		position: fixed;
+		top: 0;
+		right:0;
+		bottom: 0;
+	  	left: 0px;
+	  	width: 100%;
+	 	height: 100%;
+	 	/*z-index: 0;*/
+	  	background: #333; 
+	    
+  
+	}
+	.sliding-menu ul
+	{
+
+		padding: 10px;
+		text-decoration: none;
+		display: block;
+	    background: linear-gradient(#3E3E3E, #383838);
+	    border-top: 1px solid #484848;
+	    border-bottom: 1px solid #2E2E2E;
+	    color: white;
+	    padding: 15px;
+
+	}
+
+	.sliding-menu ul li
+	{
+		padding: 10px;
+		padding-bottom: 10px;
+		
+
+	}
+
+
+	.menu-close i
+	{
+		margin: 15px;
+		padding-left: 10px;
+		padding-top: 10px;
+		color: gray;
+		font-size: 30px;
+	}
+
+	.menu-item
+	{
+		display: flex;
+
+	}
+
+	.fa
+	{
+		display: flex;
+		align-items:center;
+
+	}
+
+	body
+	{
+		left: 0;
+		margin: 0;
+		
+		position: relative;
+	}
+
+
+	.title-strip
+	{
+		background-color: gray;
+		display: flex;
+		color:white;
+		justify-content:space-between;
+		align-items:center;
+		height:40px;
+		padding: 15px;
+		font-size: 24px;
+		
+	}
+	.title-strip a
+	{
+		color:white;
+	}
+	.bar-icon
+	{
+		padding-left: 60px;
+		cursor: pointer;
+	}
+	.exit-button
+	{
+		padding-right: 60px;
+		cursor: pointer;
+	}
+	.contact
+	{
+		background-color: darkgray;
+		display: flex;
+		justify-content:space-between;
+		color:white;
+		height: 35px;
+		padding: 15px;
+	}
+	.desc
+	{
+		display:flex;
+		align-items:center;
+		padding-left: 60px;
+	}
+	.details
+	{
+		width:430px;
+		display: flex;
+		align-items:center;
+		justify-content:space-around;
+		
+		
+	}
+	.ac-title
+	{
+		padding: 15px;
+		padding-left: 72px;
+		font-size: 18px;
+	}
+	.row-grid
+	{
+		display: flex;
+		justify-content:space-around;
+		flex-wrap:wrap;
+		margin-top: -10px;
+		margin-left: auto;
+		margin-right: auto;	
+
+	}
+
+	@media screen and (max-width: 1100px)
+	{
+	.row-grid{
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		
+	}
+	}
+
+	.fund-details
+	{
+		background-color: gray;
+	}
+	.current-wrapper
+	{
+		border-top:3px solid teal;
+		width:300px;
+		margin: 10px;
+	}
+	.savings-wrapper
+	{
+		border-top:3px solid blue;
+		width:300px;
+		margin:10px;
+	}
+	.credit-wrapper
+	{
+		border-top:3px solid red;
+		width: 300px;
+		margin: 10px;
+	}
+
+	.ac-strip
+	{
+		display:flex;
+		flex-direction:column;
+		background-color: darkgray;
+		justify-content:space-around;
+		height: 60px;
+		padding-left: 10px;
+	}
+	.ac-title1
+	{	
+		
+	}
+	.ac-amt
+	{
+		
+	}
+	.ac-transfers
+	{
+		height: 180px;
+		display: flex;
+		flex-direction:column;
+		background-color: white;
+
+	}
+	.transfer
+	{
+		display:flex;
+		justify-content:space-between;
+		padding:10px;
+	}
+	.contents-title h6
+	{
+		padding: 5px;
+		font-size: 16px;	
+	}
+	.contents-title p
+	{
+		font-size: 12px;
+		padding-left: 5px;
+	}
+	.contents-amt p
+	{
+		padding: 5px;
+	}
+	.ac-overview
+	{
+		background-color: white;
+		display: flex;
+		justify-content:center;
+		align-items:center;
+		padding-bottom: 10px;
+		padding-top: 10px;
+	}
+	.ac-overview button
+	{
+		width:230px;
+		height:35px;
+	}
+	.accounts2
+	{
+		height:150px;
+	}
+
+	.funds-transfer
+	{
+		display: flex;
+		justify-content:space-between;
+		align-items:center;
+		padding:10px;
+		margin-left: auto;
+		margin-right: auto;	
+		background-color: ivory;
+		width:1200px;
+		height:60px;
+	}
+	.funds-transfer-
+	{
+		padding-left: 10px;
+		padding-right: 10px;
+		flex:1 1 0px;
+	}
+	.funds-transfer-text
+	{
+		padding: 4px;
+	}
+	.funds-transfer-no
+	{
+		padding: 4px;
+	}
+	.funds-transfer-no input
+	{
+		width:200px;
+		height:22px;
+	}
+	.funds-transfer-no select
+	{
+		width:200px;
+		height:32px;
+	}
+	.transfer-button button
+	{
+		width:200px;
+		height:32px;
+		flex:1 1 0px;
+	}
+	.footer
+	{
+		display: flex;
+		justify-content:center;
+		height: 50px;
+		align-items:center;
+		background-color: darkgray;
+		color: white;
+	}
+	.footer a
+	{
+		text-decoration: none;
+		color: white;
+	}
+
+</style>
+<link rel="stylesheet" href="reset.css" type="text/css">
+
+<body>
+		
+	<div class="sliding-menu">
+			<div class="menu-close">
+				<i class="fa fa-times fa-lg exit-button" aria-hidden="true"></i>
+			</div>
+			<ul>
+				<div class="menu-item"><i class="fa fa-money" aria-hidden="true"></i><li>Accounts</li></div>
+				<div class="menu-item"><i class="fa fa-cc-paypal" aria-hidden="true"></i><li>Payments</li></div>
+				<div class="menu-item"><i class="fa fa-child" aria-hidden="true"></i><li>Details</li></div>
+				<div class="menu-item"><i class="fa fa-cog" aria-hidden="true"></i><li>Settings</li></div>
+				<div class="menu-item"><i class="fa fa-question-circle-o" aria-hidden="true"></i><li>Help</li></div>
+			</ul>
+	</div>
+	
+		 
+	<div class="container">
+		<div class="header">
+			 	<div class="title-strip">
+			 		<i class="fa fa-bars fa-lg bar-icon" aria-hidden="true"></i>			
+					<h2>BETTER BANKING</h2>
+					<i class="fa fa-times fa-lg exit-button" aria-hidden="true"></i>		
+			 	</div>
+			 	<div class="contact">
+			 		<div class="desc">
+						<p>Feeling lost? Let us help.</p>
+					</div>
+					<div class="details">
+						<p class="phone-no">Ph 0845 452 452</p>
+						<button class="chat-btn" type="button">Live Chat</button>	
+					</div> 		
+			 	</div>
+		 </div>
+		 <div class="fund-details">
+			 	<div class="accounts1">
+			 		<div class="ac-title">
+			 			<h3>My Accounts</h3>
+			 		</div>
+					 <div class="row-grid">	
+					 		<div class="current-wrapper">
+						 		<div class="current">
+						 			<div class="ac-strip">
+							 			<div class="ac-title1">
+							 				<h4>Current Account</h4>
+							 			</div>	
+							 			<div class="ac-amt">
+							 				<p>$1,325.64</p>
+							 			</div>
+							 		</div>
+							 		<div class="ac-transfers">
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Bank Transfer</h6>
+								 				</div>
+								 				<div>
+								 					<p>2 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>$895.00</p>
+								 			</div>
+							 			</div>
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Amazon UK</h6>
+								 				</div>
+								 				<div>
+								 					<p>4 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>-$122.45</p>
+								 			</div>
+							 			</div>
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Spotify</h6>
+								 				</div>
+								 				<div>
+								 					<p>5 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>-$9.90</p>
+								 			</div>
+							 			</div>
+							 		</div>
+							 		<div class="ac-overview">
+							 			<button type="button">Account Ovreview</button>
+							 		</div>
+						 		</div>
+					 		</div>
+					 		<div class="savings-wrapper">
+						 		<div class="current">
+						 			<div class="ac-strip">
+							 			<div class="ac-title1">
+							 				<h4>Savings Account</h4>
+							 			</div>	
+							 			<div class="ac-amt">
+							 				<p>$1,325.64</p>
+							 			</div>
+							 		</div>
+							 		<div class="ac-transfers">
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Bank Transfer</h6>
+								 				</div>
+								 				<div>
+								 					<p>2 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>$895.00</p>
+								 			</div>
+							 			</div>
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Amazon UK</h6>
+								 				</div>
+								 				<div>
+								 					<p>4 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>-$122.45</p>
+								 			</div>
+							 			</div>
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Spotify</h6>
+								 				</div>
+								 				<div>
+								 					<p>5 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>-$9.90</p>
+								 			</div>
+							 			</div>
+							 		</div>
+							 		<div class="ac-overview">
+							 			<button type="button">Account Ovreview</button>
+							 		</div>
+						 		</div>
+						 	</div>
+						 	<div class="credit-wrapper">
+							 					 		<div class="current">
+						 			<div class="ac-strip">
+							 			<div class="ac-title1">
+							 				<h4>Credit Account</h4>
+							 			</div>	
+							 			<div class="ac-amt">
+							 				<p>$1,325.64</p>
+							 			</div>
+							 		</div>
+							 		<div class="ac-transfers">
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Bank Transfer</h6>
+								 				</div>
+								 				<div>
+								 					<p>2 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>$895.00</p>
+								 			</div>
+							 			</div>
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Amazon UK</h6>
+								 				</div>
+								 				<div>
+								 					<p>4 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>-$122.45</p>
+								 			</div>
+							 			</div>
+							 			<div class="transfer">
+							 				<div class="contents-title">
+								 				<div>
+								 					<h6>Spotify</h6>
+								 				</div>
+								 				<div>
+								 					<p>5 days ago</p>
+								 				</div>
+								 			</div>
+								 			<div class="contents-amt">
+								 				<p>-$9.90</p>
+								 			</div>
+							 			</div>
+							 		</div>
+							 		<div class="ac-overview">
+							 			<button type="button">Account Ovreview</button>
+							 		</div>
+						 		</div>
+						 	</div>
+						</div>
+			 	</div>
+			 	<div class = "accounts2">
+					<div class="ac-title">
+						<h3>Quick Transfer</h3>	
+					</div>	 		
+					<div class="funds-transfer">
+						<div class="funds-transfer-">
+							<div class = "funds-transfer-text">
+								<p>I want to transfer...</p>
+							</div>
+							<div class="funds-transfer-no">
+								<input type="number" name = "transferAmt" min="1" max="5">
+							</div>
+						</div>
+						<div class="funds-transfer-">
+							<div class = "funds-transfer-text">
+								<p>From this account...</p>	
+							</div>
+							<div class = "funds-transfer-no">
+								<select>
+									<option value="cac1">Current Account</option>
+									<option value="cac2">Account 2</option>
+									<option value="cac3">Account 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="funds-transfer-">
+							<div class="funds-transfer-text">
+								<p>To this account...</p>
+							</div>
+							<div class="funds-transfer-no">
+								<select>
+									<option value="sac1">Savings Account</option>
+									<option value="sac2">Account 2</option>
+									<option value="sac3">Account 3</option>
+								</select>
+							</div>
+						</div>
+						<div class="transfer-button">
+							<button type="button">Transfer Funds</button>
+						</div>
+					</div>
+			 	</div>
+		 </div>
+		 <div class="footer">
+		 	<div class="fLink1">
+		 		<a href="#">Legal Info</a>|
+		 	</div>
+		 	<div class="fLink2">
+		 		<a href="#">Security</a>|
+		 	</div>
+		 	<div class="fLink3">
+		 		<a href="#">Accessability</a>
+		 	</div>
+		 </div>
+	</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.bar-icon').click(function(){
+			$('.container').animate({left:"280px"},200);
+		});
+		$('.menu-close').click(function(){
+			$('.container').animate({left:"0px"},200);
+		});
+	});
+</script>
+</html>
