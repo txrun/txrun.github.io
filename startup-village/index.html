@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	
+	.contents
+	{ 
+		display:flex;
+	
+	}
+	.image
+	{
+		width: 300px;
+		display:flex;
+		justify-content:flex-end;
+		padding: 20px 0 20px 0;
+	}
+	.menu
+	{
+		display: flex;
+		width:1000px;
+		justify-content:flex-end;
+		align-items:center;
+		
+	}
+	li 
+	{
+		
+		display:flex;
+		justify-content:space-around;
+		padding: 15px;
+
+
+	}
+	li a
+	{
+		text-decoration:none;
+		color:gray;
+		font-family:Source Sans Pro;
+		font-weight:500; 
+		border-bottom: transparent 1px;
+    	padding-bottom: 5px;
+	}
+	ul
+	{
+		display:flex;
+		flex-direction:row;
+
+	}
+	#colorStrip
+	{
+	    width: 100%; 
+	    height: 1px;
+	    border-bottom-style: solid;
+	    border-color: lightgray;
+	}
+	.main
+	{
+		height:300px;
+		border-style: solid;
+		border-color: white;
+	}
+	.footer-contents
+	{
+		display:flex;
+		justify-content:space-between;
+		flex-direction:row;
+		background-color: darkgray;
+		padding-left:30px; 
+		padding-right:30px;
+
+	}
+	.footer-image
+	{
+		
+		flex-direction:column;
+		justify-content:space-between;
+		padding-top:20px;
+	}
+	.contact
+	{
+		font-size: 12px;
+		
+	}
+	.contact a
+	{
+		text-decoration:none;
+		color:black;
+		font-weight: 600;
+	}
+	.section2
+	{
+		display: flex;
+		flex-direction:column;
+		justify-content:space-around;
+	}
+	.sv-links
+	{
+		font-size: 13px;
+	}
+	.sv-links ul
+	{
+
+		flex-direction:column;
+
+	}
+	.sv-links ul li
+	{
+		justify-content:space-between;
+		padding: 0;
+	}
+	.sv-links ul li a
+	{
+		color:black;
+		padding-top: 5px;
+	}	
+	.socialMedLinks
+	{
+		font-size: 13px;
+		height: 40px;
+		display:flex;
+		align-items:flex-end;
+	}
+	.socialMedLinks ul li
+	{
+		padding-left:0;
+				
+	}
+
+	.socialMedLinks ul li a
+	{
+		color:black;
+	}
+	.bottomStrip
+	{
+		height: 30px;
+
+		display:flex;
+		align-items:center;
+		justify-content:space-between;
+		font-size: 11px;
+		background-color: gray;
+		padding-left:30px; 
+		padding-right:30px;
+	}
+	.rightEnd a
+	{
+		color:black;
+		text-decoration: none;
+	}
+	.addressWrapper1
+	{
+		font-size: 13px;
+	}
+	.addressWrapper2
+	{
+		font-size: 13px;
+	}
+	.adLine1
+	{
+		font-weight: 600;
+	}
+</style>
+
+<body>
+	<div class = "container">
+		<div class = "contents">
+			<div class = "image">
+				<img src="rsz_startup-village-logo.jpg" width="200px" height="85px">
+			</div>
+			
+			<div class = "menu">
+				<ul>
+					<li><a href="#">BLOG<hr class="divider"></a></li>
+					
+					<li><a href="#">PLAYBOOK<hr class="divider"></a></li>
+					
+					<li><a href="#">STARTUPS<hr class="divider"></a></li>
+					
+					<li><a href="#">FACULTY<hr class="divider"></a></li>
+					
+					<li><a href="#">RESOURCES<hr class="divider"></a></li>
+					 
+					<li><a href="#">ABOUT<hr class="divider"></a></li>
+					
+					<li><a href="#">LOGIN<hr class="divider"></a></li>
+					
+				</ul>
+			</div>
+			
+		</div>
+		<div id="colorStrip"></div>
+		<div class="main">
+			
+		</div>
+		<div class="footer-contents">
+			<div class="section1">
+				<div class = "footer-image">
+					<img src="rsz_startup_village.jpg" width="150px" height="65px">
+				</div>
+				<div class="contact">
+					<p>Reach us at <a href="mailto:help@sv.co">help@sv.co</a></p>
+				</div>
+			</div>
+			<div class = "section2">
+				<div class="sv-links">
+					<ul>
+						<li><a href="#">Playbook</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Startups</a></li>
+					</ul>
+				</div>
+				<div class ="socialMedLinks">
+					<ul>
+						<li><a href="#">fb</a></li>
+						<li><a href="#">T</a></li>
+						<li><a href="#">YT</a></li>
+					</ul>
+				</div>
+			</div>	
+			<div class = "section3">
+				<div class="addressWrapper1">
+					<p class="adLine1">Startup Village, Kochi</p>
+					<p>Kinfra Hi-Tech Park, Kalamassery,</p>
+					<p>Kochi - 683503.</p>
+				</div>
+				
+			</div>
+			<div class = "section4">
+				<div class="addressWrapper2">
+					<p class="adLine1">Startup Village, Vishakapatnam,</p>
+					<p>Sunrise Startups, Hill No.3,</p>
+					<p>Cyber Hills, IT SEZ, Madhuruwada,</p>
+					<p>Vishakapatnam-530048.</p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="bottomStrip">
+				<div class="leftEnd">
+					&copy 2015 SV.CO.All rights reserved.
+				</div>
+				<div class="rightEnd">
+					<a href="#">Privacy Policy</a>|<a href="#">Terms of Use</a>
+				</div>
+			</div>
+	</div>
+	
+</body>
+</html>
