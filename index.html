@@ -3,68 +3,201 @@
   <head>
     <title></title>
   </head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <style type="text/css">
-    .container {
+    .container-section-splash {
+      height: 630px;
+      background-color: #2E2E2E;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .splash-contents {
+      margin-bottom: 50px;
+    }
+    .splash-contents h1{
+      color: #F8F8F8;
+      font-size: 50px;
+      text-shadow: 3px 3px 6px black;
+      display: flex;
+      justify-content: center;
+    }
+    .splash-contents h3 {
+      color: #F8F8F8;
+      display: flex;
+      justify-content: center;
+    }
+    .contact-buttons {
+      display: flex;
+      justify-content: space-around;
+    }
+    button {
+      height: 40px;
+      width: 100px;
+      border-radius: 5px;
+    }
+    .container-section1 {
       display: flex;
       justify-content :center;
     }
     .contents {
       display: flex;
+      height: 300px;
     }
     .profile-content {
-      margin-left: 30px;
+      margin-left: 224px;
       margin-right: 30px;
+      margin-top: 35px;
       width: 40%;
     }
     .topic-contents {
       padding: 20px;
       flex-grow: 2;      
     }
+    .content1 {
+      border-top:1px solid #E7E7E7;
+      background: #F8F8F8;
+      height: 300px;
+      display: flex;
+
+    }
+    .content1-description {
+      margin: 40px;
+      width: 600px;
+    }
+    .content1-image {
+      margin: 40px;
+    }
+    .content2 {
+      border-top:1px solid #E7E7E7;
+      height: 300px;
+      display: flex;
+    }
+    .content2-image {
+      margin: 40px;
+      width: 600px;
+    }
+    .content2-description {
+      margin: 40px;
+      width: 600px;
+    }
+    .content3 {
+      border-top:1px solid #E7E7E7;
+      height:300px;
+      display: flex;
+    }
+    .content3-description {
+      margin: 40px;
+      width: 600px;
+    }
+    .content3-image {
+
+    }
+    .content4 {
+      border-top:1px solid #E7E7E7;
+      height: 300px;
+      display: flex;
+    }
+    .content4-image {
+      margin: 40px;
+      width: 600px;
+    }
+    .content4-description {
+      margin: 40px;
+      width: 600px;
+    }
+    .contact-strip {
+      height: 140px;
+      background-color: #2E2E2E;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-strip h2 {
+      color: #F8F8F8;
+      text-shadow: 3px 3px 6px black;
+      
+    }
+    .contact-strip button {
+      margin-left: 60px;
+    }
+    .footer p {
+      height: 60px;
+      color: gray;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      margin-left: 60px;
+    }
   </style>
   <body>
     <div class = "container">
-      <div class = "contents">
-        <div class = "profile-content">
-          <h1>Hello, I'm Tarun.</h1>
-          <img src="">
-          <h3>About Me</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class = "topic-contents">
-          <p>
-            <a href="snake.html">Snake Game</a>
-          </p>
-          <p>
-            <a href="https://github.com/txrun/snake-tutorial/blob/master/README.md">Tutorial for Snake Game</a>
-          </p>
-          <p>
-            <a href="https://gist.github.com/txrun/6987e7afe6349eb0997793fd3acb90db.js">Issue Log</a>
-          </p>
-          <p>
-            <a href="startup-village/index.html">HTML/CSS Practice #1 - Startup Village</a>
-          </p>
-          <p>
-            <a href="better-banking/index.html">HTML/CSS Practice #2 - Better Banking</a>
-          </p>
-          <p>
-            <a href="kaggle/index.html">HTML/CSS Practice #3 - Kaggle datasets</a>
-          </p>
-          <p>
-            <a href="https://github.com/txrun/roman-arabic/blob/master/roman-arabic.js">JavaScript Program to convert between Roman and Arabic numerals</a>
-          </p>
-          <p>
-            <a href="https://github.com/txrun/lcd-display">JS Program to display input numbers in its Seven-segment format</a>
-          </p>
-          <p>
-            <a href="https://github.com/txrun/jeopardy">Jeopardy</a>
-          </p>
-          <p>
-            <a href="https://github.com/txrun/finding-falcone">Finding Falcone</a>
-          </p>
+    <div class = "container-section-splash">
+      <div class = "splash-contents">
+        <h1>Tarun Mathew</h1>
+      <h3>Front-end Developer</h3>
+      <hr>
+        <div class = "contact-buttons">
+          <a href="https://github.com/txrun?tab=repositories" target="_blank"><button type = "button"><i class="fa fa-github" aria-hidden="true"></i> GitHub </button></a>
+          <a href="https://twitter.com/TarunMatt" target="_blank"><button type = "button"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter </button></a>
         </div>
       </div>
-      <div class = "footer">
+    </div>
+    <div class = "container-section1">
+      <div class = "contents">
+        <div class = "profile-content">
+          <h2>Hello! I'm Tarun.</h2>
+          <img src="">
+          
+          <p>I am a front-end developer based in Bangalore with a passion for writing clean and effecient code.</p>
+          <p>I am an intern with Protoship.io where I am gaining an insight of the various dimensions of web development. Currently, I am learning to hack in HTML/CSS and JavaScript, and everything else to get me started in this line of profession.</p>
+        </div>
         
+      </div>
+    </div>
+      <div class = "content1">
+        <div class = "content1-description">
+          <h3>Snake Game</h3>
+          <p> The classic snake game. Guide your snake along the screen so that it can grow in length all the while trying to avoid collision with any object in its path, including the snake itself. Link <a href="https://txrun.github.io/snake.html" target="_blank">here.</a></p>
+        </div>
+        <div class = "content1-image">
+          <img src="/home/user1/Downloads/Screen Shot 2016-08-22 at 18.18.32.png" height = "200" width = "500">
+        </div>
+      </div>
+      <div class = "content2">
+        <div class = "content2-image">
+          <img src="/home/user1/Downloads/rsz_2016-08-22-183956_1366x768_scrot.jpg" height = "200" width = "500">
+        </div>
+        <div class = "content2-description">
+          <h3> Snake Game - Tutorial</h3>
+          <p>A detailing of how I approached the snake game. The functions I used and the logic behind them, and how the graphics and  animations were implemented. Link <a href="https://github.com/txrun/snake-tutorial/blob/master/README.md" target="_blank">here.</a></p>
+        </div>
+      </div>
+      <div class = "content3">
+        <div class = "content3-description">
+          <h3>The Issue Log</h3>
+          <p>The various roadblocks I came across during my starting days of hacking in JavaScript, and the steps I took on the way to resolve them. <a href="https://gist.github.com/txrun/6987e7afe6349eb0997793fd3acb90db">here.</a></p>
+        </div>
+        <div class = "content3-image">
+          <img src="">
+        </div>
+      </div>
+      <div class = "content4">
+        <div class = "content4-description">
+          <h3>Better Banking</h3>
+          <p>Using HTML/CSS, an attempt at recreating a banking website, including a slide-in menu. Link <a href="https://txrun.github.io/better-banking/index.html" target="_blank">here.</a></p>
+        </div>
+        <div class = "content4-image">
+          <img src="/home/user1/Downloads/photo295341897557321739.jpg" height = "200" width = "500">
+        </div>
+      </div>
+      <div class = "contact-strip">
+        <h2>Connect with me :</h2>
+        <a href="https://github.com/txrun?tab=repositories" target="_blank"><button type = "button"><i class="fa fa-github" aria-hidden="true"></i> GitHub </button></a>
+          <a href="https://twitter.com/TarunMatt" target="_blank"><button type = "button"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter </button></a>
+      </div>
+      <div class = "footer">
+        <p> &copy 2016 txrun.github.io</p>
       </div>
     </div>
   </body>
